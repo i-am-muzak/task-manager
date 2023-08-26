@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, ForeignKey, String
 from sqlalchemy.orm import relationship
+from sqlalchemy.dialects.postgresql import UUID
 
 from config.database import Base
 
@@ -9,6 +10,7 @@ class UserProject(Base):
     # Fields
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
+    slug = Column(String)
     created_at = Column(Integer)
     updated_at = Column(Integer)
     creator_id = Column(Integer, ForeignKey("users.id"))

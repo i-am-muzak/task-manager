@@ -95,21 +95,6 @@
             </template>
           </a-input>
         </div>
-        <div class="flex items-center justify-center pl-3">
-          <a-avatar-group
-            :max-count="2"
-            :max-style="{ color: '#f56a00', backgroundColor: '#fde3cf' }"
-          >
-            <a-avatar
-              src="https://upload.wikimedia.org/wikipedia/commons/3/33/Mark_Kassen%2C_Tony_C%C3%A1rdenas_and_Chris_Evans_%28cropped%29.jpg"
-            />
-            <a-avatar style="background-color: #1890ff">K</a-avatar>
-            <a-tooltip title="Ant User" placement="top">
-              <a-avatar style="background-color: #87d068"> U </a-avatar>
-            </a-tooltip>
-            <a-avatar style="background-color: #1890ff"> Y </a-avatar>
-          </a-avatar-group>
-        </div>
       </div>
       <GroupDraggable
         @onTaskClicked="handleTaskClicked"

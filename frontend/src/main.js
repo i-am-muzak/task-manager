@@ -14,6 +14,9 @@ import "ant-design-vue/dist/antd.css";
 import "@/assets/variables.less";
 import "@/assets/main.less";
 
+// Axios Global
+import axiosGlobalSettings from "@/plugins/axios/config";
+
 const app = createApp(App);
 
 // Components
@@ -22,6 +25,7 @@ app.component("Popper", Popper);
 app.use(createPinia());
 app.use(router);
 app.use(Antd);
-app.use(VueClickAway)
+app.use(VueClickAway);
+app.config.globalProperties.$axios = axiosGlobalSettings
 
 app.mount("#app");
