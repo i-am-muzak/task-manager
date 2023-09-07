@@ -31,7 +31,7 @@ import time
 router = APIRouter(tags=["user_projects"], prefix="/user-projects")
 
 
-# Router used for register.
+# Get all projects of logged user.
 @router.get(
     "/all", description="Get all user projects...", response_model=List[UserProjectView]
 )
@@ -45,7 +45,7 @@ def getAll(
     return user_projects
 
 
-# Router used for register.
+# Create a project for the logged user.
 @router.post(
     "/create", description="Create an user project.", response_model=UserProjectView
 )

@@ -12,6 +12,9 @@ class UserPage(Base):
     created_at = Column(Integer)
     updated_at = Column(Integer)
     project_id = Column(Integer, ForeignKey("user_projects.id"))
+    user_id = Column(Integer, ForeignKey("users.id"))
+    slug = Column(String(length=80))
 
     # Relationships
     project = relationship("UserProject", backref="user_pages")
+    user = relationship("User", backref="user_pages")
